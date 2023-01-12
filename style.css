@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: #cfd0d4;
+    height: 100vh;
+}
+
+.mail {
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+.media-container {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.media-btn {
+
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icones {
+    width: 80px;
+}
+
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 600px;
+    border-radius: 30px;
+    background: #f1f1f1;
+    box-shadow: 39px 39px 83px #b8b8b8,
+        -39px -39px 83px #ffffff;
+}
+
+.container-onglets {
+    background: #f1f1f1;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    border-bottom: 1px solid #333;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+
+}
+
+h1 {
+    width: 80%;
+}
+
+.onglets {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 0.3px solid #333;
+
+}
+.onglets:last-child {
+    padding: 20px;
+}
+.contenu {
+    text-align: center;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.contenu h3,
+h4 {
+    padding: 20px;
+}
+
+.contenu hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background-color: #000;
+    border: none;
+}
+
+.contenu p {
+    padding: 20px;
+}
+
+/* anim */
+
+.active {
+    background: #333;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.activeContenu {
+    animation: fade 0.5s forwards;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 1;
+    }
+
+}
+
+@media screen and (max-width: 480px) 
+{
+    
+    .container-onglets
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    h1
+    {
+        font-size: 1.em;
+    }
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 768px)and (min-width: 481px) {}
